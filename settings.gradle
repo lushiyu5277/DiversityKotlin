@@ -1,2 +1,3 @@
 rootProject.name='DiversityKotlin'
 include ':app'
+include ':JavaTestlib'
