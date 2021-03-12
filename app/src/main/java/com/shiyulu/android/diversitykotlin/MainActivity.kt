@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view);
         val simpleAdapter = SimpleAdapter(dataList, onClick = {
-            Log.e(TAG, "onCreate: $it been clicked")
+            s -> Log.e(TAG, "onCreate: $s been clicked")
         })
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = simpleAdapter
