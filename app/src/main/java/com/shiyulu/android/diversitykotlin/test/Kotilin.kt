@@ -1,11 +1,14 @@
 package com.shiyulu.android.diversitykotlin.test
 
-import java.util.*
+import com.shiyulu.android.diversitykotlin.bean.User
 
 
 fun main() {
-    print("Hello Kotlin " + doubleX(3))
-    num = 19
+    var user = User("shiyu", "123", "456")
+    var userCopy = user.copy()
+    println(user)
+    println(userCopy)
+    println(user == userCopy)
 }
 
 fun doubleX(x: Int): Int {
