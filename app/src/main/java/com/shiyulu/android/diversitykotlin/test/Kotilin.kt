@@ -1,5 +1,6 @@
 package com.shiyulu.android.diversitykotlin.test
 
+import android.view.View
 import com.shiyulu.android.diversitykotlin.bean.User
 
 
@@ -14,6 +15,7 @@ fun main() {
     repeat(100) {
         println(it)
     }
+    funcType()
 }
 
 fun doubleX(x: Int): Int {
@@ -22,6 +24,18 @@ fun doubleX(x: Int): Int {
 
 fun getUser(): User {
     return User("shiyu", "123", "456")
+}
+
+fun funcType() {
+    val view = KotlinView()
+    view.setOnClickListener {
+        println(it)
+    }
+    view.setOnClickListener(::click)
+}
+
+fun click(view: View) {
+    println(view)
 }
 
 val name = "shiyu" //只读变量，不是常量
